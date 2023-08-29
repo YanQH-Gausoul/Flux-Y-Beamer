@@ -1,0 +1,11 @@
+\beamer@sectionintoc {1}{Flux-Y}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{colors}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{fonts}{6}{0}{1}
+\beamer@sectionintoc {2}{Collections}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{lists}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{tables}{8}{0}{2}
+\beamer@subsectionintoc {2}{3}{blocks}{9}{0}{2}
+\beamer@sectionintoc {3}{中文、英文、公式混排演示}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{Some diagrams}{16}{0}{3}
+\beamer@subsectionintoc {3}{2}{Some equations}{17}{0}{3}

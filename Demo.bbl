@@ -1,0 +1,29 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[Adams, 1993]{article}
+Adams P.
+\newblock The title of the work.
+\newblock \emph{The name of the journal}, 4(2):201--213, 1993.
+\newblock An optional note.
+
+\bibitem[Babington, 1993]{book}
+Babington P.
+\newblock \emph{The title of the work}, vol.~4 of \emph{10}.
+\newblock The name of the publisher, The address, 3 ed., 1993.
+\newblock An optional note.
+
+\bibitem[Eston, 1993]{inbook}
+Eston P.
+\newblock \emph{The title of the work}, vol.~4 of \emph{5}, chap.~8, pages
+  201--213.
+\newblock The name of the publisher, The address of the publisher, 3 ed., 1993.
+\newblock An optional note.
+
+\bibitem[Yan \& Diamond, 2022]{yan_staircase_2022}
+Yan Q \& Diamond PH.
+\newblock Staircase formation by resonant and non-resonant transport of
+  potential vorticity.
+\newblock \emph{Nuclear Fusion}, 62(12):126032, 2022.
+
+\end{thebibliography}

@@ -1,0 +1,648 @@
+\documentclass[9pt,aspectratio=169]{ctexbeamer}
+
+%==============================================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%------------------------------------------------------------------------------
+% Using sans font as default font
+% Recommend Lato and Roboto fonts
+\setsansfont[BoldFont={Lato Medium},BoldItalicFont={Lato Italic}]{Roboto Light}%正文为非衬线字体，故设置sansfont
+%\setmainfont{Times New Roman}
+%\setmonofont{Courier Std}
+%------------------------------------------------------------------------------
+% Chinese fonts: Mac
+\setCJKmainfont[BoldFont={PingFangSC-Medium}]{PingFangSC-Light} % mac PingFangSC-Light
+\setCJKsansfont[BoldFont={PingFangSC-Medium}]{PingFangSC-Light} % mac
+
+% Chinese fonts: Windows
+% \setCJKmainfont{Microsoft YaHei Light} % windows
+% \setCJKsansfont{Microsoft YaHei Light} % windows
+
+%==============================================================================
+
+%==============================================================================
+% Define where theme files are located. ('/styles')
+\usepackage{styles/fluxmacros}
+\usefolder{styles}
+% Available styles: 
+% asphalt, blue, red, green, gray, THUpurple, 
+% Pantone2018, Pantone2021A, Pantone2021B, Pantone2022
+\usetheme[style=asphalt]{flux} % Change the style of the theme here
+\setblockstyle{metropolis} % block styles: metropolis, nobackground, native, emph
+%==============================================================================
+
+%==============================================================================
+% Extra packages for this demo:
+\usepackage{amsmath,mathrsfs,amssymb,mathtools}
+\usepackage{metalogo}% For print LaTeX type logo
+\usetikzlibrary{graphs}
+\usetikzlibrary{arrows,shapes}
+
+\usepackage{booktabs}
+% \usepackage{tabularx}
+\usepackage{colortbl}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+%==============================================================================
+
+%==============================================================================
+% biblatex
+% \usepackage[style=apa,doi=false,isbn=false,url=false,eprint=false]{biblatex}
+% \addbibresource{refs.bib}
+
+%==============================================================================
+
+%==============================================================================
+% Modify the figure captions
+\usepackage{caption}
+\setbeamertemplate{caption}[numbered]
+\captionsetup{font={footnotesize},justification=justified}
+\renewcommand{\figurename}{Fig. }
+%------------------------------------------------------------------------------
+% Set the line space
+\linespread{1.1}
+%==============================================================================
+
+%==============================================================================
+% Information
+\title{Flux-Y-Beamer Demo}
+\subtitle{副标题：演示文件 v0.1}
+\date{\today}
+\author{晏庆豪$^{1}$, DDDD$^{2}$} % author name in footline can be modified in outertheme style file
+\institute{\small \emph{1. Tsinghua University, Department of Engineering Physics, Beijing 100084\\2. CASS and Department of Physics, University of California San Diego, California 92093}}
+
+%------------------------------------------------------------------------------
+% LOGOs
+% location of logos can be modified in outertheme style file, search: FramePageLogo and FrontPage Logo
+% logo height is defined here
+\pgfdeclareimage[height=0.1\paperheight]{FrontPageLogo1}{assets/THUlogo1.png}
+\pgfdeclareimage[height=0.07\paperheight]{FramePageLogo1}{assets/THUlogo2.png}
+
+\pgfdeclareimage[height=0.08\paperheight]{FrontPageLogo2}{assets/UCSDlogo1.png}
+\pgfdeclareimage[height=0.07\paperheight]{FramePageLogo2}{assets/UCSDlogo2.png}
+%==============================================================================
+
+%==============================================================================
+\begin{document}
+
+% Generate title page
+\titlepage
+
+\begin{frame}
+ \frametitle{Table of Content}
+ \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=hide]
+\end{frame}
+
+\section{Flux-Y}
+\subsection{introduction}
+\begin{frame}{\secname}{\subsecname}
+  \justifying
+  Flux-Y is a modern style beamer presentation modified based on Flux-beamer. It is provided as a work in progress version and may suffer from inconsistencies. Sources and complementary information are available at\\[0.3cm]
+  \centering\textbf{https://github.com/YanQH-Gausoul/Flux-Y-Beamer}
+\end{frame}
+
+\subsection{colors}
+\begin{frame}[fragile]{\secname}{\subsecname}
+	\centering
+	Five Flux-beamer color palettes.\\
+	\verb+\usetheme[style=asphalt]{flux}+\\[0.8cm]
+	\newcommand{\colorRow}[1]{
+	\begin{tabular}{p{4cm}cccc}
+	#1 & \cellcolor{primary}\hspace*{1cm} &\cellcolor{primaryLight}\hspace*{1cm}&\cellcolor{secondary}\hspace*{1cm}&\cellcolor{tertiary}\hspace*{1cm}\\
+ 	\end{tabular}
+ 	}
+ 	\colorRow{Asphalt}\\[0.3cm]
+	\definecolor{primaryLight}{HTML}{3a99d9}
+	\definecolor{primary}{HTML}{2e81b7}
+	\definecolor{secondary}{HTML}{792583}
+	\definecolor{tertiary}{HTML}{e76d55}
+ 	\colorRow{Blue}\\[0.3cm]
+    \definecolor{primaryLight}{HTML}{77933c}
+    \definecolor{primary}{HTML}{4f622a}
+    \definecolor{secondary}{HTML}{884F4D}
+    \definecolor{tertiary}{HTML}{2B3234}
+ 	\colorRow{Green}\\[0.3cm]
+ 	\definecolor{primaryLight}{HTML}{C0392B}
+    \definecolor{primary}{HTML}{96281B}
+    \definecolor{secondary}{HTML}{347986}
+    \definecolor{tertiary}{HTML}{56423e}
+ 	\colorRow{Red}\\[0.3cm]
+ 	\definecolor{primaryLight}{HTML}{616161}
+	\definecolor{primary}{HTML}{424242}
+	\definecolor{secondary}{HTML}{518071}
+	\definecolor{tertiary}{HTML}{8b7687}
+ 	\colorRow{Gray}\\[0.3cm]
+\end{frame}
+
+\begin{frame}[fragile]{\secname}{\subsecname}
+	\centering
+	Five Flux-Y-beamer color palettes.\\
+  One for THU purple theme color.\\
+  Four for selected Pantone colors.\\
+	\verb+\usetheme[style=asphalt]{flux}+\\[0.8cm]
+	\newcommand{\colorRow}[1]{
+	\begin{tabular}{p{4cm}cccc}
+	#1 & \cellcolor{primary}\hspace*{1cm} &\cellcolor{primaryLight}\hspace*{1cm}&\cellcolor{secondary}\hspace*{1cm}&\cellcolor{tertiary}\hspace*{1cm}\\
+ 	\end{tabular}
+ 	}
+    \definecolor{primaryLight}{HTML}{792583}
+    \definecolor{primary}{HTML}{670773}
+    \definecolor{secondary}{HTML}{C0392B}
+    \definecolor{tertiary}{HTML}{77933c}
+ 	\colorRow{THUpurple}\\[0.3cm]
+   \definecolor{primaryLight}{HTML}{A07EC5}
+   \definecolor{primary}{HTML}{8262AC}
+   \definecolor{secondary}{HTML}{F49863}
+   \definecolor{tertiary}{HTML}{BDD391}
+ 	\colorRow{Pantone2018}\\[0.3cm]
+   \definecolor{primaryLight}{HTML}{029DB1}
+   \definecolor{primary}{HTML}{0283B1}
+   \definecolor{secondary}{HTML}{D25C78}
+   \definecolor{tertiary}{HTML}{949398}
+ 	\colorRow{Pantone2021A}\\[0.3cm]
+   \definecolor{primaryLight}{HTML}{AEA3CC}
+   \definecolor{primary}{HTML}{AE95CC}
+   \definecolor{secondary}{HTML}{F2A1BD}
+   \definecolor{tertiary}{HTML}{8AACD4}
+ 	\colorRow{Pantone2021B}\\[0.3cm]
+   \definecolor{primaryLight}{HTML}{7470C7}
+   \definecolor{primary}{HTML}{6868AD}
+   \definecolor{secondary}{HTML}{F36F61}
+   \definecolor{tertiary}{HTML}{8AACD4}
+ 	\colorRow{Pantone2022}\\[0.3cm]
+\end{frame}
+
+\subsection{fonts}
+\begin{frame}[fragile]{\secname}{\subsecname}
+  \begin{minipage}{0.35\textwidth}
+    Default English typographies
+    \begin{itemize}
+      \item Regular
+      \item \alert{Alert}
+      \item \example{Example}
+      \item \textit{Italic}
+      \item \textbf{Bold}
+    \end{itemize}
+  \end{minipage}
+  \vspace{0.5cm}
+  \begin{minipage}{0.55\textwidth}
+    默认中文字体，可在导言区分别设置，需字体库支持
+    \begin{itemize}
+      \item 常规
+      \item \alert{醒目}
+      \item \example{例子}
+      \item \textit{斜体}
+      \item \textbf{粗体}
+    \end{itemize}
+  \end{minipage}
+  
+  Citation style \cite{book} \cite{inbook}
+ \end{frame}
+
+
+\section{Collections}
+\subsection{lists}
+
+\begin{frame}{\secname}{\subsecname}
+   \begin{columns}[T,onlytextwidth]
+    \column{0.33\textwidth}
+      \textbf{Items}
+      \begin{itemize}
+        \item Cats \item Dogs \item Birds
+      \end{itemize}
+
+    \column{0.33\textwidth}
+      \textbf{Enumerations}
+      \begin{enumerate}
+        \item First \item Second \item Last
+      \end{enumerate}
+
+    \column{0.33\textwidth}
+      \textbf{Descriptions}
+      \begin{description}
+        \item[Apples] Yes \item[Oranges] No \item[Grappes] No
+      \end{description}
+\end{columns}
+\let\thefootnote\relax\footnote{Note the following demo slides are directly taken from metropolis theme. Copyright 2014 Matthias Vogelgesang.\\
+Give a look at https://github.com/matze/mtheme/tree/master/demo}
+\end{frame}
+
+\subsection{tables}
+
+\begin{frame}{\secname}{\subsecname}
+  \begin{table}
+    \caption{Largest cities in the world (source: Wikipedia)}
+    \begin{tabular}{@{} lr @{}}
+      \toprule
+      City & Population\\
+      \midrule
+      Mexico City & 20,116,842\\
+      Shanghai & 19,210,000\\
+      Peking & 15,796,450\\
+      Istanbul & 14,160,467\\
+      \bottomrule
+    \end{tabular}
+    \hspace*{1cm}
+        \setlength\extrarowheight{3pt}
+    \begin{tabular}{|lr|}
+      \hline
+      \rowcolor{primaryLight}\color{background}City & \color{background}Population\\
+      \hline
+      Mexico City & 20,116,842\\
+      Shanghai & 19,210,000\\
+      Peking & 15,796,450\\
+      Istanbul & 14,160,467\\
+      \hline
+    \end{tabular}
+\end{table}
+\end{frame}
+
+\subsection{blocks}
+
+\begin{frame}[fragile]{\secname}{\subsecname}
+  		Flux theme comes with four pre-defined block style collections.\\
+  		Native style (default) available as \verb+\setblockstyle{native}+\\[0.5cm]
+  
+   \setblockstyle{native} % Default behavior, optional line.
+   \centering
+	\begin{minipage}[b]{0.5\textwidth}
+
+	  \begin{block}{Default}
+        Block content.
+      \end{block}
+
+      \begin{alertblock}{Alert}
+        Block content.
+      \end{alertblock}
+
+      \begin{exampleblock}{Example}
+        Block content.
+      \end{exampleblock}      
+      
+	\end{minipage}
+	
+\end{frame}
+
+\begin{frame}[fragile]{\secname}{\subsecname}
+  		Flux theme comes with four pre-defined block style collections.\\
+  		NoBackground style available as \verb+\setblockstyle{nobackground}+\\[0.5cm]
+  
+   \setblockstyle{nobackground}
+   \centering
+	\begin{minipage}[b]{0.5\textwidth}
+
+	  \begin{block}{Default}
+        Block content.
+    \end{block}
+
+    \begin{alertblock}{Alert}
+      Block content.
+    \end{alertblock}
+
+    \begin{exampleblock}{Example}
+      Block content.
+    \end{exampleblock}       
+      
+	\end{minipage}
+	
+\end{frame}
+
+\begin{frame}[fragile]{\secname}{\subsecname}
+  		Flux theme comes with four pre-defined block style collections.\\
+  		Metropolis style available as \verb+\setblockstyle{metropolis}+\\[0.5cm]
+  
+   \setblockstyle{metropolis}
+   \centering
+	\begin{minipage}[b]{0.5\textwidth}
+
+	  \begin{block}{Default}
+        Block content.
+      \end{block}
+
+      \begin{alertblock}{Alert}
+        Block content.
+      \end{alertblock}
+
+      \begin{exampleblock}{Example}
+        Block content.
+      \end{exampleblock}      
+      
+	\end{minipage}
+	
+\end{frame}
+
+
+\begin{frame}[fragile]{\secname}{\subsecname}
+  Flux theme comes with four pre-defined block style collections.\\
+  emph style available as \verb+\setblockstyle{emph}+\\[0.5cm]
+
+\setblockstyle{emph}
+\centering
+\begin{minipage}[b]{0.45\textwidth}
+
+\begin{block}{Default}
+    Block content.
+  \end{block}
+
+  \begin{alertblock}{Alert}
+    Block content.
+  \end{alertblock}
+
+  \begin{exampleblock}{Example}
+    Block content.
+  \end{exampleblock}      
+  
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}[fragile]{\secname}{tbox}
+  Flux-Y offer pre-defined text box, which simply display a sentence using Flux-beamer block styles without title.\\[0.5cm]
+\centering
+\begin{minipage}[b]{0.25\textwidth}
+  \setblockstyle{native}
+  \begin{tbox}{default}
+    Default text content.
+  \end{tbox}
+
+  \begin{tbox}{alerted}
+    Alert text content.
+  \end{tbox}
+
+  \begin{tbox}{example}
+    Example text content.
+  \end{tbox}      
+  
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[b]{0.25\textwidth}
+  \setblockstyle{metropolis}
+  \begin{tbox}{default}
+    Default text content.
+  \end{tbox}
+
+  \begin{tbox}{alerted}
+    Alert text content.
+  \end{tbox}
+
+  \begin{tbox}{example}
+    Example text content.
+  \end{tbox}      
+  
+\end{minipage}
+
+\end{frame}
+
+% The [plain] causes the headlines, footlines, and sidebars 
+% to be suppressed. Useful for showing large pictures
+\begin{frame}[plain]
+	\begin{center}
+	  This is a plain frame.\\
+	  Use it to display full page images.
+	  \end{center}
+\end{frame}
+
+\section{中文、英文、公式混排演示}
+
+\begin{frame}[noframenumbering]
+  \frametitle{目录}
+  \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/show/hide,subsubsectionstyle=hide]
+\end{frame}
+\subsection{Some diagrams}
+\begin{frame}{\secname}{\subsecname}
+  \vspace{-0.5cm}
+  \begin{minipage}[t]{0.45\textwidth}
+    \begin{figure}[h]
+      \small
+      \centering
+      \tikzstyle{BOX} = [align=center, inner sep=1ex]
+      \begin{tikzpicture}[node distance =0.5cm,scale=0.6] %overlay
+        % \draw[help lines, gray,step=.5cm] (-5cm,-5cm) grid (6cm, 6cm);
+        \node[BOX] (T_1) at (0,4.2) {};
+        \node[BOX] at (-0.5,4.5) {$\partial_t\ln\langle T\rangle=-\sqrt{2\varepsilon_0}\partial_{x}\underline{\langle\widetilde{V}_{x}\widetilde{T}\rangle_{y}}+\chi_{\mathrm{neo}}\partial_x^2\ln\langle T\rangle$};
+        \node[BOX] (T_2) at (0,3) {$\langle\tilde{V}_x\tilde{T}\rangle_k$};
+        \node[BOX] (T_3) at (0,1.5) {$ \sim R\left(\omega-k_y \Omega_Z-b_k\bar{\Omega}_D\right)\langle\tilde{V}_x^2\rangle_k \left[ \partial_x \overline{\Delta}\phi_Z (..)-\partial_x\ln \langle T\rangle(..)\right]$};
+        \node[BOX] (T_4) at (0,0) {$ (\chi_4^{\text{non-res}}+\chi_4^{\text{res}}) \partial_x\overline{\Delta}\phi_Z-(\chi_3^{\text{non-res}}+\chi_3^{\text{res}}) \partial_x\ln \left\langle T \right\rangle$};
+        
+        \node[BOX] (T_5) at (0,-1.8) {Equation (\ref{E:staircases_T})};
+    
+        \draw[->,thick] (T_1)->(T_2);
+        \draw[->,thick] (T_2)->(T_3);
+        \draw[->,thick] (T_3)->(T_4);
+        \draw[->,thick] (T_4)->node[left]{$ \chi $ model}(T_5);
+
+      \end{tikzpicture}
+    \end{figure}
+  \end{minipage}
+  \hspace{0.7cm}
+  \begin{minipage}[t]{0.45\textwidth}
+    \begin{figure}[h]
+      \centering
+      \small
+      \tikzstyle{BOX} = [align=center, inner sep=1ex]
+      \begin{tikzpicture}[node distance =0.5cm,scale=0.73] %overlay
+        % \draw[help lines, gray,step=.5cm] (-5cm,-5cm) grid (6cm, 6cm);
+        \node[BOX] (V_1) at (0.3,4.8) {};
+        \node[BOX] at (0,5) {$\partial_t\left[\overline{\Delta}\phi_Z\right]= -\partial_{x}\underline{\langle\tilde{V}_{x}\overline{\Delta}\tilde{\phi}\rangle_{y}}+\nu_c \partial_x^2\overline{\Delta}\phi_Z$};
+    
+        \node[BOX](V_2_1) at (-1.6,4) {};
+        \node[BOX] at (0,3.8) {$\underline{\langle\tilde{V}_x\overline{\Delta}\tilde{\phi}\rangle_k= -\langle\tilde{V}_x \delta q\rangle_k + \langle\tilde{V}_x\tilde{T}\rangle_k}$};
+        \node[BOX](V_2_2) at (0,3.6) {};
+    
+        \node[BOX] (V_4_1) at (0,2.7) {$ R\left(\omega-k_{y}\Omega_Z\right)R\left(\omega-k_y \Omega_Z -k_yb_k\bar{\Omega}_D\right)\langle\tilde{V}_{x}^2\rangle_k\partial_x\ln \langle T\rangle (..)$};
+        \node[BOX] (V_4_2) at (0,2.2) {$- R\left(\omega-k_y \Omega_Z -k_yb_k\bar{\Omega}_D\right)\langle\tilde{V}_{x}^2\rangle_k\partial_x\overline{\Delta}\phi_Z(..)$};
+        
+        \node[BOX] (V_5) at (0,1) {$ \textcolor{red}{\chi_1^{\mathrm{non-res}}}\textcolor{text}{\frac{\partial_x\ln \langle T\rangle}{\sqrt{2\varepsilon_0}} - ( \chi_2^{\mathrm{non-res}} + \chi_2^{\mathrm{res}})\partial_x\overline{\Delta}\phi_Z}$};
+    
+        \node[BOX] (V_6) at (0,-0.4) {Equation \eqref{E:staircases_Z}};
+    
+        \draw[->,thick] (V_1) .. controls (0,4.2) and (-1.6,4.9) .. (V_2_1);
+        \draw[->,thick] (V_2_2) -> (V_4_1);
+        % \draw[->,thick] (V_2_3) edge[bend left=10] (V_3_3);
+        \draw[->,thick] (V_4_2) -> (V_5);
+        \draw[->,thick] (V_5) ->node[left]{$ \chi $ model} (V_6);
+      \end{tikzpicture}
+      \label{<label>}
+    \end{figure}
+  \end{minipage}
+
+\vspace{-0.6cm}
+\begin{tbox}{default}
+  \begin{minipage}[t]{0.45\textwidth}
+    \vspace{-0.2cm}
+    \footnotesize
+    \begin{align*}
+      \widetilde{T}_\mathbf{k}=& R(...)\left[\partial_x\overline{\Delta}\phi_Z(...)-\partial_x\ln \langle T\rangle(...)\right]\tilde{V}_x(k)\\
+      \delta q_k=&R(\omega-k_{y}\Omega_Z)\left[\widetilde{T}_k(...)-\partial_{x} \langle q\rangle(...)\right]\widetilde{V}_{x}(k)
+    \end{align*}
+  \vspace{-0.2cm}
+  \end{minipage}
+  \hspace{0.3cm}
+  \begin{minipage}[t]{0.45\textwidth}
+    \footnotesize
+    \vspace{-0.2cm}
+    \begin{align*}
+      C_i\overline{\Delta}\widetilde{\phi} &=\tau\widetilde{T}-\delta q\\
+      \chi_3&=\Re\sum_{k}[\tilde{V}_x(k)]^2\dfrac{i}{\omega-k_y\left( \Omega_Z+b_k\bar{\Omega}_D\right)}
+    \end{align*}
+  \end{minipage}
+  \vspace{-0.2cm}
+\end{tbox}
+
+\vspace{-0.2cm}
+\begin{tbox}{alerted}
+  \vspace{-0.1cm}
+  \begin{minipage}[t]{0.5\textwidth}
+    \begin{itemize}
+      \item \textcolor{black}{温度} and \textcolor{black}{涡度} 梯度同时出现\footnotemark[2]
+    \end{itemize}
+  \end{minipage}
+  \hspace{0.1cm}
+  \begin{minipage}[t]{0.5\textwidth}
+    \begin{itemize}
+      \item $ \omega=\omega_R+i\gamma \Rightarrow$ 分离共振和非共振贡献
+      \item 共振输运只出现在涡量通量中
+    \end{itemize}
+  \end{minipage}
+\end{tbox}
+  \footnotetext[2]{Connections to Ref.\cite{article}}
+\end{frame}
+
+\subsection{Some equations}
+\begin{frame}{\secname}{\subsecname}
+  \begin{tbox}{default}
+    \small
+    \vspace{-0.3cm}
+    \begin{align}
+      \dfrac{\partial}{\partial t}\left(\overline{\Delta}\phi_Z\right) & = -\dfrac{\partial}{\partial x}\left(\dfrac{1}{C_i}\vartheta\chi^{\mathrm{n}}\dfrac{\partial}{\partial x}\dfrac{\ln \langle T\rangle}{\sqrt{2\varepsilon_0}}\right) + \dfrac{\partial}{\partial x}\left[ \vartheta\chi \dfrac{\partial}{\partial x}(\overline{\Delta}\phi_Z)\right] + \nu \dfrac{\partial^2}{\partial x^2} \overline{\Delta}\phi_Z\label{E:staircases_Z}\\
+      \dfrac{\partial}{\partial t}\ln \left\langle T \right\rangle & = -\dfrac{\partial}{\partial x}\left[C_i \sqrt{2\varepsilon_0} (1-\vartheta) \chi\dfrac{\partial}{\partial x}\left(\overline{\Delta}\phi_Z\right)\right]+\dfrac{\partial}{\partial x}\left[\chi \dfrac{\partial}{\partial x}\ln \left\langle T \right\rangle\right]+\chi_{\mathrm{neo}}\dfrac{\partial^2 \ln \left\langle T \right\rangle}{\partial x^2}\label{E:staircases_T}
+    \end{align}
+    \vspace{-0.3cm}
+  \end{tbox}
+
+  \vspace{-0.6cm}
+  \begin{minipage}[t]{0.41\textwidth}
+    \begin{exampleblock}{边界条件}
+      \vspace{-0.5cm}
+      \begin{align}
+        \dfrac{\partial}{\partial x}\overline{\Delta}\phi_Z \bigg\vert_{\mathrm{B}}&=0\label{E:BC:Z}\\
+        \dfrac{\partial}{\partial x}\ln \langle T\rangle \bigg\vert_{\mathrm{B}}&\equiv \textcolor{red}{\kappa_T^{\mathrm{B}}} = \mathrm{Const.}\label{E:BC:T}\\
+        \dfrac{\partial}{\partial x}\langle\tilde{U}^2\rangle \bigg\vert_{\mathrm{B}}&=0,\quad \mathrm{or} \quad \dfrac{\partial}{\partial x}\langle\tilde{\phi}^2\rangle \bigg\vert_{\mathrm{B}}=0\label{E:BC:U}
+      \end{align}
+      And: $ \Omega_Z=\partial_x\phi_Z $, set B.C. for $ \Omega_Z $ as:
+      \begin{equation}\label{E:BC:V}
+        \Omega_Z \bigg\vert_{\mathrm{B}} =0
+      \end{equation}
+      \textcolor{red}{Flux-driven System}
+    \end{exampleblock}
+  \end{minipage}
+  \hspace{0.04\textwidth}
+  \begin{minipage}[t]{0.53\textwidth}
+    \begin{exampleblock}{分段输运系数模型 \small $ \chi \equiv (\chi^{\text{n}} + \chi^{\text{r}})|\tilde{\phi}_0|^2 $}
+      \vspace{0cm}
+      \begin{figure}[b]
+        \centering
+        \includegraphics[width=0.75\textwidth]{figures/chiModel2D.pdf}
+      \end{figure}
+      \vspace{-0.3cm}
+    \end{exampleblock}
+    \vspace{-0.2cm}
+    \begin{tbox}{alerted}
+      \small Eq. \eqref{E:staircases_Z}, \eqref{E:staircases_T}, \eqref{E:U_CHI_orignal} + 边界条件 (\ref{E:BC:Z}-\ref{E:BC:V}) + 输运系数模型 $ \Longrightarrow $ 演化系统
+      % \vspace{-0.3cm}
+    \end{tbox}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}{\secname}
+  %For every picture that defines or uses external nodes, you'll have to apply the 
+%'remember picture' style. To avoid some typing, we'll apply the style to all pictures.
+%By default all math in tikz nodes are set in inline mode. Change this to
+% displaystyle so that  we don't get small fractions.
+\begin{exampleblock}{演化系统}
+  \tikzstyle{every picture} += [remember picture]
+  \everymath{\displaystyle}
+
+  \vspace{-0.3cm}
+  \begin{figure}
+  \centering
+  \begin{tikzpicture}
+  \tikzstyle{BOX} = [align=center, inner sep=1ex]
+  %\draw[help lines, gray] (-1cm,1cm) grid (14cm, 4cm);
+  \node at (0,3) [BOX] (KE) {KE \& QuasiNeutrality};
+  \node at (3,3) [BOX] (Darmet) {Darmet Model};
+  \node at (6,3) [BOX] (PV) {$ \tilde{T} $、$ \tilde{U}\equiv\tilde{\phi}-\overline{\Delta}\tilde{\phi} $\\ PV System};    
+  \node at (9,2) [BOX] (FLUX) { $ \langle\tilde{V}_x\tilde{T}\rangle_y, \langle\tilde{V}_x\overline{\Delta}\tilde{\phi}\rangle_y $};
+  \node at (3,2) [BOX] (CHI) {$ \chi^{\mathrm{r}}, \chi^{\mathrm{n}}$ model};
+  \node at (0,2) [BOX] (STAIRS) {$ \partial_t\langle T\rangle=-\sqrt{2\varepsilon_0}\partial_{x}\langle\widetilde{V}_{x}\widetilde{T}\rangle_{y} $\\ $ \partial_t\left[\overline{\Delta}\phi_Z\right]= -\partial_{x}\langle\tilde{V}_{x}\overline{\Delta}\tilde{\phi}\rangle_{y} $};
+  
+  \draw[->,thick] (KE) edge (Darmet);
+  \draw[->,thick] (Darmet) -> (PV);
+  \draw[->,thick] (PV) --node[above, fill=green!20]{Quasi-linear Approx.} (10.3,3) -- (10.5,2.8)--(10.5,2.2)--(10.3,2) -> (FLUX);
+  \draw[->,thick] (FLUX) --node[above, fill=green!20]{Disper. Relation}node[below, fill=green!20]{Lorentzian Spectrum}  (CHI);
+  \draw[->,thick] (CHI) -> (STAIRS);
+  \draw[->,thick,dashed] (Darmet) .. controls (3.5,2.3) .. (4.8,2.3);
+  
+  \end{tikzpicture}
+  \end{figure}
+  \vspace{-0.3cm}
+ \end{exampleblock}
+
+ \vspace{-0.7cm}
+ \begin{minipage}[t]{0.6\textwidth}
+  \begin{alertblock}{剖面模式（pattern）}
+    \begin{enumerate}
+      \item 共振: “\textcolor{red}{Wave + Particle + Flow}”
+      \item 涡度通量中仅温度梯度的\textcolor{red}{非共振}贡献
+      \item 流结构$ \Omega_Z $调制剖面状态:\\
+        $\bullet$ 非共振态：陡峭的温度剖面\\
+        $\bullet$ 共振态： (hypothesized) Near-marginal 温度剖面
+      \item 边界热通量阈值条件 $ \Delta \kappa_T^{\mathrm{crit}} $
+      \item 台阶宽度决定于： $ \delta_b $, $ \chi^{\mathrm{r}}/\chi^{\mathrm{n}} $, $ \kappa_T^{\mathrm{B}} $
+    \end{enumerate}
+    \vspace{-0.2cm}
+  \end{alertblock}
+ \end{minipage}
+ \hspace{0.4cm}
+ \begin{minipage}[t]{0.35\textwidth}
+   \begin{block}{可能的应用}
+    \begin{itemize}
+      \item ZF的无碰撞饱和
+      \item 模型推广到快离子和湍流相互作用
+      \item 范式？
+    \end{itemize}
+    \vspace{-0.2cm}
+   \end{block}
+   \cite{yan_staircase_2022}
+ \end{minipage}
+\end{frame}
+
+
+\begin{frame}{Q \& A}
+  \centering
+  \huge Thank You!\\
+  \textbf{Thank You!}
+\end{frame}
+
+\section*{References}
+
+\begin{frame}[allowframebreaks,noframenumbering]% 允许片子换页
+\frametitle{\secname}
+\bibliographystyle{FluxY} % A bibtex style generated by Q. Yan
+\bibliography{refs}
+% \printbibliography
+\end{frame}
+
+\begin{frame}
+  \centering
+  \frametitle{Flux}
+  \framesubtitle{license}
+  Flux-Y is licensed under GNU General Public License v3.\\[0.3cm]
+    \centering\textbf{http://www.gnu.org/licenses}\\[0.3cm]
+ Inspired by \textbf{Metropolis} theme from Matthias Vogelgesang.\\
+ https://github.com/matze/mtheme and \textbf{Flux-Beamer} theme from Peter van Berg.\\
+ https://github.com/pvanberg/flux-beamer
+  
+ \end{frame}
+
+\end{document}

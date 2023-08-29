@@ -1,0 +1,35 @@
+\frametitle{\secname }\framesubtitle {tbox}
+  Flux-Y offer pre-defined text box, which simply display a sentence using Flux-beamer block styles without title.\\[0.5cm]
+\centering
+\begin{minipage}[b]{0.25\textwidth}
+  \setblockstyle{native}
+  \begin{tbox}{default}
+    Default text content.
+  \end{tbox}
+
+  \begin{tbox}{alerted}
+    Alert text content.
+  \end{tbox}
+
+  \begin{tbox}{example}
+    Example text content.
+  \end{tbox}
+
+\end{minipage}
+\hspace{1cm}
+\begin{minipage}[b]{0.25\textwidth}
+  \setblockstyle{metropolis}
+  \begin{tbox}{default}
+    Default text content.
+  \end{tbox}
+
+  \begin{tbox}{alerted}
+    Alert text content.
+  \end{tbox}
+
+  \begin{tbox}{example}
+    Example text content.
+  \end{tbox}
+
+\end{minipage}
+
