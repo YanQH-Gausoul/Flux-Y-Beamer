@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.12.1)  29 AUG 2023 21:23
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.12.1)  27 OCT 2023 10:51
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/yanqinghao/Documents/Flux-beamer-Y/Slides/Demo.tex
-(/Users/yanqinghao/Documents/Flux-beamer-Y/Slides/Demo.tex
+**/Users/yanqinghao/Documents/Flux-Y-Beamer/v0.1/Demo.tex
+(/Users/yanqinghao/Documents/Flux-Y-Beamer/v0.1/Demo.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/ctex/ctexbeamer.cls (/usr/local/texlive/2022/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2021/12/12 v2.5.8 Backend configuration file (CTEX)
@@ -1455,11 +1455,11 @@ Package rerunfilecheck Info: File `Demo.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  36581 strings out of 476179
- 836667 string characters out of 5809544
+ 836661 string characters out of 5809544
  1159385 words of memory out of 5000000
  56490 multiletter control sequences out of 15000+600000
  481955 words of font info for 137 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 142i,17n,136p,497b,1194s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 142i,17n,136p,495b,1194s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Demo.xdv (21 pages, 211956 bytes).
+Output written on Demo.xdv (21 pages, 211968 bytes).

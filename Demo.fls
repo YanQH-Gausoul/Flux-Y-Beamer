@@ -1,8 +1,8 @@
-PWD /Users/yanqinghao/Documents/Flux-beamer-Y/Slides
+PWD /Users/yanqinghao/Documents/Flux-Y-Beamer/v0.1
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt
-INPUT /Users/yanqinghao/Documents/Flux-beamer-Y/Slides/Demo.tex
+INPUT /Users/yanqinghao/Documents/Flux-Y-Beamer/v0.1/Demo.tex
 OUTPUT Demo.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/ctex/ctexbeamer.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/ctex/ctexbeamer.cls

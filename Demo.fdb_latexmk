@@ -1,19 +1,19 @@
 # Fdb version 3
-["bibtex Demo"] 1693314617 "Demo.aux" "Demo.bbl" "Demo" 1693315393
+["bibtex Demo"] 1693314617 "Demo.aux" "Demo.bbl" "Demo" 1698375124
   "./FluxY.bst" 1693314566 36595 1cd171a0cf612a73226ea965b88f5642 ""
-  "Demo.aux" 1693315391 9451 a6d8baa356b4876fd87b7571b7543634 "xelatex"
+  "Demo.aux" 1698375121 9451 a6d8baa356b4876fd87b7571b7543634 "xelatex"
   "refs.bib" 1693312613 1431 aeb29d15dd09f6304b2e3fc8d53fa97b ""
   (generated)
   "Demo.bbl"
   "Demo.blg"
-["xdvipdfmx"] 1693315391 "Demo.xdv" "Demo.pdf" "Demo" 1693315393
-  "Demo.xdv" 1693315391 211956 69d71b571435bd62c410469a1414adf0 "xelatex"
+["xdvipdfmx"] 1698375121 "Demo.xdv" "Demo.pdf" "Demo" 1698375124
+  "Demo.xdv" 1698375121 211968 386c153e782114a44be37e4396ba9c63 "xelatex"
   (generated)
   "Demo.pdf"
-["xelatex"] 1693315389 "/Users/yanqinghao/Documents/Flux-beamer-Y/Slides/Demo.tex" "Demo.xdv" "Demo" 1693315393
-  "/System/Library/Fonts/Menlo.ttc" 1689065782 2156036 ec05dfca6821d85440da0899493002c3 ""
-  "/System/Library/Fonts/PingFang.ttc" 1689065782 77871956 3d22e380c15f04df909e9b516b18342c ""
-  "/Users/yanqinghao/Documents/Flux-beamer-Y/Slides/Demo.tex" 1693315388 23860 91c5eec651cdd4585406ee97dd37634a ""
+["xelatex"] 1698375119 "/Users/yanqinghao/Documents/Flux-Y-Beamer/v0.1/Demo.tex" "Demo.xdv" "Demo" 1698375124
+  "/System/Library/Fonts/Menlo.ttc" 1693640113 2156036 ec05dfca6821d85440da0899493002c3 ""
+  "/System/Library/Fonts/PingFang.ttc" 1693640113 77871956 3d22e380c15f04df909e9b516b18342c ""
+  "/Users/yanqinghao/Documents/Flux-Y-Beamer/v0.1/Demo.tex" 1693315388 23860 91c5eec651cdd4585406ee97dd37634a ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -272,13 +272,13 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1669895029 5419906 3cc8606950d08aca45c0cea333d6ddea ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "Demo.aux" 1693315391 9451 a6d8baa356b4876fd87b7571b7543634 "xelatex"
-  "Demo.bbl" 1693314617 904 19dd39cd7461ebcb45a115a6859e2c12 "bibtex Demo"
-  "Demo.nav" 1693315391 3788 2751bc125875b06917238a7d90c41f18 "xelatex"
-  "Demo.out" 1693315391 1205 7132656ee63fcfd96a3d27635ab3fac1 "xelatex"
+  "Demo.aux" 1698375121 9451 a6d8baa356b4876fd87b7571b7543634 "xelatex"
+  "Demo.bbl" 1693319042 904 19dd39cd7461ebcb45a115a6859e2c12 "bibtex Demo"
+  "Demo.nav" 1698375121 3788 2751bc125875b06917238a7d90c41f18 "xelatex"
+  "Demo.out" 1698375121 1205 7132656ee63fcfd96a3d27635ab3fac1 "xelatex"
   "Demo.tex" 1693315388 23860 91c5eec651cdd4585406ee97dd37634a ""
-  "Demo.toc" 1693315391 567 0f70c6b6ec4d1ea0679f8306c24eac37 "xelatex"
-  "Demo.vrb" 1693315390 729 70d7ff6f2c1e699dc63739e2b403266b "xelatex"
+  "Demo.toc" 1698375121 567 0f70c6b6ec4d1ea0679f8306c24eac37 "xelatex"
+  "Demo.vrb" 1698375121 729 70d7ff6f2c1e699dc63739e2b403266b "xelatex"
   "assets/THUlogo1.png" 1639924228 640844 8550681e55b084cf440b705fd5ca4008 ""
   "assets/THUlogo2.png" 1639924630 975416 32e15d3b8f070ec81e7eb27c0f31a3db ""
   "assets/UCSDlogo1.png" 1639718324 739283 ce95635691a94d41b74c2b9dc88649cd ""

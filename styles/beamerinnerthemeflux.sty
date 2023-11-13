@@ -53,7 +53,7 @@
 }
 
 \setbeamertemplate{section in toc}{
-  \hspace*{0.4cm}\tikz[baseline=-0.5ex]\node[section number]{\textbf{\small\inserttocsectionnumber}};
+  \hspace*{0.4cm}\tikz[baseline=-0.5ex]\node[section number]{\textbf{\usebeamerfont*{toc subtitle}\inserttocsectionnumber}};
   \ \tikz[baseline=-0.5ex]\node[section]{\usebeamerfont*{toc title} \inserttocsection};\\[-0.3cm]
   \hspace*{1.13cm}{\usebeamercolor*[fg]{footer} \rule{0.6\paperwidth}{0.2pt}\\\nointerlineskip}
 }
@@ -64,14 +64,14 @@
 }
 
 \setbeamertemplate{section in toc shaded}{
-  \hspace*{0.4cm}\tikz[baseline=-0.5ex]\node[section number, fill=Gray!40, text=background]{\usebeamerfont*{toc subtitle}\textbf{\inserttocsectionnumber}};
+  \hspace*{0.4cm}\tikz[baseline=-0.5ex]\node[section number, fill=Gray!40, text=background]{\usebeamerfont*{toc subtitle}\inserttocsectionnumber};
   \ \tikz[baseline=-0.5ex]\node[section, text=primaryLight!20]{\usebeamerfont*{toc title} \inserttocsection};\\[-0.3cm]
   \hspace*{1.3cm}{\usebeamercolor*[fg]{footer} \rule{0.6\paperwidth}{0.2pt}\\\nointerlineskip}
 }
 
 \setbeamertemplate{subsection in toc shaded}{
   \hspace*{0.55cm}\tikz[baseline=-0.5ex]\node[subsection number,fill=Gray!20]{};
-  \hspace*{0.5cm} \tikz[baseline=-0.5ex]\node[subsection, text=Gray!20]{};\\[-0.1cm]
+  \hspace*{0.5cm} \tikz[baseline=-0.5ex]\node[subsection, text=Gray!20]{\usebeamerfont*{toc subtitle}\inserttocsubsection\\\nointerlineskip};\\[-0.1cm]
 }
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

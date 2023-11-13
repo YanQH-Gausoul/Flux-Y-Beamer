@@ -57,8 +57,8 @@
 \end{beamercolorbox}%
 \begin{beamercolorbox}[wd=\textwidth, leftskip=0.3cm,rightskip=0.3cm, ht=0.3cm,dp=0.15cm]{footer text}%
 
-	\usebeamerfont{footnote}\copyright \insertauthor \hfill
-	% \usebeamerfont{footnote}\copyright Author Names \hfill
+	% \usebeamerfont{footnote}\copyright \insertauthor \hfill
+	\usebeamerfont{footnote}\copyright\, Q. Yan, P. H. Diamond, R. Ma \hfill
 	% Uncomment to display navigation button
 	%\insertslidenavigationsymbol%
 	%\insertframenavigationsymbol%
@@ -66,7 +66,7 @@
 	%\insertsectionnavigationsymbol%
 	%\insertdocnavigationsymbol%
 	%\insertbackfindforwardnavigationsymbol%
-	\hspace{-1cm}\inserttitle	
+	\hspace{-1.5cm}\inserttitle	
 	\hfill\insertframenumber\,/\,\inserttotalframenumber%
 \end{beamercolorbox}%
 }
@@ -124,31 +124,11 @@
   			 \usebeamerfont{institute}\color{Gray}\insertinstitute
 			};
 			%\node[anchor=south,outer ysep=0.4cm] at (current page.south){\small\color{Gray!90}\insertdate};
-			\node[anchor=south, icon, xshift=-1.50cm, yshift=0.5cm] at (current page.south)(logo1){\pgfuseimage{FrontPageLogo1}};
+			\node[anchor=south, icon, xshift=-1.50cm, yshift=0cm] at (current page.south)(logo1){\pgfuseimage{FrontPageLogo1}};
 			% second logo: location is relative to the first logo
 			\node[anchor=west, icon, xshift=1cm] at (logo1.center) (logo2){\pgfuseimage{FrontPageLogo2}};
 		\end{tikzpicture}
 	\end{frame}
-}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% TOC frame on new section
-\AtBeginSection[]
-{
-\setbeamertemplate{section in toc}{
-  \hspace*{0.4cm}\tikz[baseline=-0.5ex]\node[section number]{\usebeamerfont*{toc subtitle}\textbf{\inserttocsectionnumber}};
-  \ \ \tikz[baseline=-0.5ex]\node[section]{\normalsize \textbf{\inserttocsection}};\\[-0.3cm]
-  \hspace*{1.24cm}{\usebeamercolor*[fg]{footer} \rule{0.6\paperwidth}{0.2pt}\\\nointerlineskip}
-}
- \setbeamertemplate{subsection in toc}{
-  \hspace*{0.55cm}\tikz[baseline=-0.5ex]\node[subsection number, fill=secondary!80]{};
-  \hspace*{0.5cm} \tikz[baseline=-0.5ex]\node[subsection]{\normalsize\inserttocsubsection};\\[-0.2cm]
-}
- % Uncomment here to activate new page with section.
- %\begin{frame}{\hspace{0.5cm}}
- %	\tableofcontents[currentsection]
- %\end{frame}
 }
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
